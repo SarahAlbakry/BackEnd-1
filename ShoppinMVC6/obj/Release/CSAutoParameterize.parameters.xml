@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ShoppingCartEntities-Web.config Connection String" description="ShoppingCartEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=~/bin/Models\Model1.csdl|~/bin/Models\Model1.ssdl|~/bin/Models\Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=sql5053.site4now.net;initial catalog=DB_A62240_ShoppingCart;user id=DB_A62240_ShoppingCart_admin;password=sarah@777;;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\ProjectWebMVC1\\ShoppinMVC6\\ShoppinMVC6\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShoppingCartEntities']/@connectionString" />
+  </parameter>
+</parameters>

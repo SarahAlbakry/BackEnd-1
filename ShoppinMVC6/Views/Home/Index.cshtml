@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ShoppinMVC6.Models.tbl_product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/StyleCss.css" rel="stylesheet" />
+
+<link href="~/Content/all.min.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-4 text-center">
+                <div style="border: 1px solid #b3ccb3; margin:20px 10px 30px 10px;padding:20px; border-radius:5px;">
+                    <img style="width:99% ;height:370px; border-radius:3px" src="@Url.Content(item.pro_imge)" />
+                    <h4 class="text-center">@Html.DisplayFor(a => item.pro_desc)</h4>
+                    <h4 class="text-center">@Html.DisplayFor(a => item.pro_price)$</h4>
+                    <a href="~/Home/AddToCart/@item.pro_ID" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> ADD TO CART</a>
+
+
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+
+</div>
+<script src="~/Scripts/all.min.js"></script>

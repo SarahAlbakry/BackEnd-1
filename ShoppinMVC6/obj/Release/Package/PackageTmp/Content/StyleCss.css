@@ -1,0 +1,30 @@
+﻿
+.navbar
+{
+    position: relative;
+    min-height: 67px;
+    margin-bottom: 9px;
+    border: 1px solid transparent;
+}
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 27px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #c7cec9;
+    font-size: 17px;
+}
+ .navbar-nav > li > a {
+    padding-top: 28px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "ChekToCart";
+
+}
+@if (TempData["Mess"] != null)
+{
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!</strong>@TempData["mess"]
+    </div>
+}
+
+
+
+
+<div class="row">
+
+    <div class="col-lg-6 col-md-6">
+
+        @if (TempData["cart"] != null)
+        {
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quality</th>
+                        <th>Price</th>
+                        <th>Bill</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in TempData["cart"] as List<ShoppinMVC6.Models.Carts>)
+                    {
+                        <tr>
+                            <td>@item.CartName</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.price$</td>
+                            <td>@item.Bill$</td>
+                            <td><a style="font-size:9px" class="btn btn-danger" href="@Url.Action("Remove",new {id=item.CarttID })">&#10008;</a></td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>@TempData["total"]$</td>
+                    </tr>
+                </tfoot>
+
+
+
+            </table>
+            using (Html.BeginForm())
+            {
+                <input type="submit" name="name" value="SHOP NOW" class="btn btn-info" />
+            }
+        }
+
+        else if (TempData["rem"] == null || TempData["cart"] == null)
+        {
+            <h4 class="text-danger">This Cart is Empty ... </h4>
+            @Html.ActionLink("BACK", "Index", "Home")
+        }
+    </div>
+</div>
+
