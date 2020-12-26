@@ -27,7 +27,6 @@ namespace ShoppinMVC6.Controllers
                 TempData["total"] = total;
             }
             TempData.Keep();
-
             return View(db.tbl_product.OrderByDescending(a => a.pro_ID));
         }
 
